@@ -31,24 +31,25 @@ def logarifm(a, b):  # функция логарифмирования
     return math.log(a, b)
 
 
-a = input("Ведите первую цифру:\n")  # Ввод переменной а
-operator = input("Оператор (+, -, *, /, ^, log):\n")
-b = input("Ведите вторую цифру:\n")  # Ввод переменной b
+if __name__ == '__main__':
+    a = input("Ведите первую цифру:\n")  # Ввод переменной а
+    operator = input("Оператор (+, -, *, /, ^, log):\n")
+    b = input("Ведите вторую цифру:\n")  # Ввод переменной b
 
-a = float(a)
-b = float(b)
+    a = float(a)
+    b = float(b)
 
-out = None
+    out = None
 
-if operator == "+":
-    mathout(sum, a, b)
-elif operator == "-":
-    mathout(sub, a, b)
-elif operator == "*":
-    mathout(mult, a, b)
-elif operator == "/":
-    mathout(div, a, b)
-elif operator == "log":
-    mathout(logarifm, a, b)
-elif operator == "^":
-    mathout(degree, a, b)
+    if operator == "+":
+        mathout(sum, a, b)
+    elif operator == "-":
+        mathout(sub, a, b)
+    elif operator == "*":
+        mathout(mult, a, b)
+    elif operator == "/":
+        mathout(div, a, b)
+    elif operator == "log":
+        mathout(logarifm, a, b)
+    elif operator == "^":
+        mathout(degree, a, b)

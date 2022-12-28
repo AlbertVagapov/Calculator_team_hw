@@ -1,6 +1,7 @@
 from constants import START_MENU, MENU_COMPLEX, MENU_RATIONAL
-from HW_calculator.checks import give_int  
+from checks import give_int
 choose_option = 'Выберите действие из списка:\n'
+
 
 def start_menu() -> int:
     """
@@ -25,6 +26,7 @@ def get_menu_rational() -> int:
     choice = give_int(choose_option, 1, 7)
     return choice
 
+
 def get_menu_complex() -> int:
     """
     Функция выводит все возможные действия с комплексными числами
@@ -36,14 +38,25 @@ def get_menu_complex() -> int:
     choice = give_int(choose_option, 1, 5)
     return choice
 
+
 def get_arg() -> float:
     '''
     Принимает от пользователя аргументы
     '''
-    a = input('Введите первый аргумент')
-    b = input('Введите второй аргумент')
+    a = float(input('Введите первый аргумент\n'))
+    b = float(input('Введите второй аргумент\n'))
     return a, b
 
+
+def get_arg_complex() -> float:
+    '''
+    Принимает от пользователя аргументы
+    '''
+    a_1 = float(input('Введите действительную часть первого числа\n'))
+    b_1 = float(input('Введите действительную часть первого числа\n'))
+    a_2 = float(input('Введите действительную часть второго числа\n'))
+    b_2 = float(input('Введите действительную часть второго числа\n'))
+    return a_1, b_1, a_2, b_2
 
 
 if __name__ == '__main__':
@@ -52,7 +65,5 @@ if __name__ == '__main__':
         a, b = get_arg()
         get_menu_rational()
     elif choice == 2:
-        #здесь должна быть проверка на комплексное число
+        # здесь должна быть проверка на комплексное число
         get_menu_complex
-
-

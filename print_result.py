@@ -1,7 +1,8 @@
 from constants import data
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 colorama.init()
+
 
 def print_result_comp(data):
     '''
@@ -13,8 +14,10 @@ def print_result_comp(data):
     data[2]=action      data[5]=a_result
                         data[6]=b_result
     '''
-    print (Fore.YELLOW+'({} + {}*i) {} ({}+ {}*i)= ({} + {}*i) \n'.format(data[0], data[1], data[2], data[3],data[4],data[5],data[6]))
+    print(Fore.YELLOW+'({} + {}*i) {} ({}+ {}*i)= ({} + {}*i) \n'.format(
+        data[0], data[1], data[2], data[3], data[4], data[5], data[6]))
     print(Style.RESET_ALL)
+
 
 def print_result_rational(data):
     '''
@@ -26,9 +29,12 @@ def print_result_rational(data):
     data[2]=action                      data[5]=a_result
                                         data[6]=b_result не используется
     '''
-    print (Fore.YELLOW+'{} {} {} = {} \n'.format(data[0], data[2], data[3], data[5]))
+    print(Fore.YELLOW +
+          '{} {} {} = {} \n'.format(data[0], data[2], data[3], data[5]))
     print(Style.RESET_ALL)
 
-print()
-print_result_comp(data) 
-print_result_rational(data)   
+
+if __name__ == '__main__':
+    print()
+    print_result_comp(data)
+    print_result_rational(data)
